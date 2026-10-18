@@ -6,11 +6,32 @@ A small Python command-line app for admins to manage users, projects, and tasks.
 
 Requires Python 3.10 or newer.
 
+Clone the repository and open a terminal in the project directory:
+
+```powershell
+git clone https://github.com/derrick-k1/CLI-tool.git
+cd CLI-tool
+```
+
+Create a virtual environment and install the dependencies:
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
+
+## Example data
+
+The repository includes [data/sample.json](data/sample.json) with sample users, projects, and tasks. Inspect it with:
+
+```powershell
+python main.py --data data/sample.json list-users
+python main.py --data data/sample.json list-projects
+python main.py --data data/sample.json list-tasks
+```
+
+The default `data/task_manager.json` file is created automatically when you add or update records. Runtime JSON files are ignored by Git so your local data is not committed.
 
 ## Commands
 
